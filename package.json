@@ -1,0 +1,17 @@
+{
+  "name": "serveur-suivi-convoi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Serveur securise de suivi de convois en direct (HTTPS, acces protege, un seul domaine).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/server.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "leaflet": "1.9.4"
+  }
+}

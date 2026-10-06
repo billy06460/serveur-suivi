@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: suivi-convoi
+    runtime: docker
+    plan: starter        # "free" s'endort après inactivité : à éviter pour un suivi en direct
+    healthCheckPath: /healthz
+    envVars:
+      - key: DRIVER_KEY
+        generateValue: true
+      - key: VIEWER_USERS
+        sync: false      # à saisir dans le tableau de bord : identifiant:motdepasse
+      - key: TRUST_PROXY
+        value: "1"
+      - key: FORCE_HTTPS
+        value: "1"
